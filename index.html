@@ -2,24 +2,169 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>Freguesia · Exemplos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14213D">
+<title>Freguesia · Mais fregueses pro seu negócio</title>
+<meta name="description" content="Cardápio digital, página de emergência, agenda online e site para pequenos negócios. A gente monta tudo, você testa 7 dias e só paga se aprovar.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Freguesia · Seu negócio no celular do cliente em 2 dias">
+<meta property="og:description" content="A gente monta tudo, você testa 7 dias e só paga se aprovar.">
+<meta property="og:image" content="https://elias-an-bo.github.io/freguesia-demos/capa.png">
+<meta property="og:url" content="https://elias-an-bo.github.io/freguesia-demos/">
 <style>
-:root{--ink:#14213D;--muted:#5B677A;--bg:#F5F6F8;--accent:#E8962B}
+:root{--ink:#14213D;--ink2:#22325A;--muted:#5B6476;--line:#E3E6EC;--bg:#F7F5F0;--paper:#fff;--accent:#E8962B;--accent-deep:#B86E12;--zap:#1E9E52;--zap-deep:#167A3F;
+  --font:"Poppins","Avenir Next","Segoe UI",Roboto,system-ui,-apple-system,sans-serif;color-scheme:light}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
-main{max-width:560px;margin:0 auto;padding:48px 16px}
-h1{font-size:34px;line-height:1.1;margin:0 0 8px}
-h1 span{color:var(--accent)}
-p{color:var(--muted);margin:0 0 12px}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font-family:var(--font);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:720px;margin:0 auto;padding-inline:16px}
+header{background:var(--ink);color:#fff;padding:20px 0 34px;padding-top:calc(20px + env(safe-area-inset-top,0px))}
+.brand{font-weight:800;font-size:22px;letter-spacing:-.02em}
+.brand span{color:var(--accent)}
+h1{font-size:clamp(32px,8.5vw,52px);line-height:1.04;letter-spacing:-.025em;margin:26px 0 12px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{font-size:17.5px;color:#D6DBE6;margin:0 0 22px;max-width:36em}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 22px;border-radius:14px;font-weight:700;font-size:16px;text-decoration:none;border:0}
+.btn-zap{background:var(--zap);color:#fff}.btn-zap:hover{background:var(--zap-deep)}
+.btn-line{border:1.5px solid rgba(255,255,255,.4);color:#fff}
+.btn svg{width:20px;height:20px}
+.promise{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:20px;font-size:14px;color:#C7CEDC}
+.promise b{color:#fff}
+section{padding:34px 0 6px}
+h2{font-size:clamp(24px,6vw,32px);line-height:1.12;letter-spacing:-.02em;margin:0 0 6px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 6px}
+.intro{color:var(--muted);margin:0 0 18px}
+.cards{display:grid;gap:12px}
+@media(min-width:640px){.cards{grid-template-columns:1fr 1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.card .ico{font-size:28px;line-height:1}
+.card h3{margin:2px 0 0;font-size:19px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.price{font-weight:800;font-size:22px;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.price small{font-weight:600;font-size:14px;color:var(--muted)}
+.card .meta{font-size:13.5px;color:var(--muted)}
+.card a.see{margin-top:auto;font-weight:700;color:var(--accent-deep);text-decoration:none}
+.card a.see:hover{text-decoration:underline}
+.steps{counter-reset:s;display:grid;gap:12px;padding:0;margin:0;list-style:none}
+.steps li{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px 16px 16px 62px;position:relative}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:16px;top:16px;width:32px;height:32px;border-radius:10px;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:800}
+.steps b{display:block}
+.steps span{color:var(--muted);font-size:15px}
+.why{display:grid;gap:10px}
+.why div{display:flex;gap:12px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px}
+.why i{font-style:normal;font-size:22px}
+.why p{margin:0}.why small{display:block;color:var(--muted);font-size:14.5px}
+details{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin:8px 0 0;color:var(--muted)}
+.final{background:var(--ink);color:#fff;border-radius:22px;padding:24px 20px;margin:34px 0 10px}
+.final h2{color:#fff}
+.final p{color:#C7CEDC;margin:0 0 16px}
+footer{color:var(--muted);font-size:13.5px;text-align:center;padding:18px 0}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:10;background:rgba(247,245,240,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 0 calc(10px + env(safe-area-inset-bottom,0px))}
+.dock .btn{width:100%}
 </style>
 </head>
 <body>
-<main>
-  <h1>Freguesia<span>.</span></h1>
-  <p>Mais fregueses pro seu negócio.</p>
-  <p>Aqui ficam os exemplos de cardápio digital, site, agenda online e página de emergência que a Freguesia monta para cada cliente. Se você recebeu um link de exemplo, é só abrir pelo celular.</p>
+<header>
+  <div class="wrap">
+    <div class="brand">Freguesia<span>.</span></div>
+    <h1>Seu negócio no celular do cliente <em>em 2 dias.</em></h1>
+    <p class="lede">Cardápio digital, página de emergência, agenda online e site para pequenos negócios. A gente monta tudo pra você, você testa 7 dias e só paga se aprovar.</p>
+    <div class="cta">
+      <a class="btn btn-zap" id="ctaTop" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg>Quero o meu</a>
+      <a class="btn btn-line" href="#produtos">Ver exemplos</a>
+    </div>
+    <div class="promise"><span><b>Sem pagar nada antes</b></span><span><b>Pronto em até 4 dias</b></span><span><b>Atendimento pelo WhatsApp</b></span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="produtos">
+    <p class="kicker">O que a gente faz</p>
+    <h2>Escolha o que seu negócio precisa</h2>
+    <p class="intro">Toque em "Ver exemplo" e teste no seu celular. Os exemplos são de mentirinha: no seu entram seu nome, seus produtos e seus preços.</p>
+    <div class="cards">
+      <article class="card">
+        <div class="ico" aria-hidden="true">🍔</div>
+        <h3>Cardápio Digital</h3>
+        <p>O cliente escolhe no celular e o pedido chega pronto no seu WhatsApp, com total e endereço. Pedido direto, sem comissão de aplicativo.</p>
+        <div class="price">R$ 490 <small>+ R$ 39/mês</small></div>
+        <div class="meta">Pronto em 2 dias · lanchonete, pizzaria, açaí, marmita, doces</div>
+        <a class="see" href="d/?p=cardapio&n=Lanchonete%20Exemplo&t=lanchonete" target="_blank" rel="noopener">Ver exemplo →</a>
+      </article>
+      <article class="card">
+        <div class="ico" aria-hidden="true">🔑</div>
+        <h3>Página de Emergência</h3>
+        <p>Quem procura chaveiro, guincho ou desentupidora no Google cai na sua página e te chama no WhatsApp já com a localização.</p>
+        <div class="price">R$ 590 <small>+ R$ 39/mês</small></div>
+        <div class="meta">Pronta em 2 dias · chaveiro, guincho, desentupidora, eletricista</div>
+        <a class="see" href="d/?p=emergencia&n=Chaveiro%20Exemplo%2024h&t=chaveiro%2024h" target="_blank" rel="noopener">Ver exemplo →</a>
+      </article>
+      <article class="card">
+        <div class="ico" aria-hidden="true">📅</div>
+        <h3>Agenda Online</h3>
+        <p>O cliente vê serviços, preços e horários livres e confirma pelo WhatsApp. Menos tempo respondendo "tem horário?".</p>
+        <div class="price">R$ 790 <small>+ R$ 59/mês</small></div>
+        <div class="meta">Pronta em 4 dias · salão, barbearia, manicure, pet</div>
+        <a class="see" href="d/?p=agenda&n=Studio%20Exemplo&t=nail%20designer" target="_blank" rel="noopener">Ver exemplo →</a>
+      </article>
+      <article class="card">
+        <div class="ico" aria-hidden="true">🏠</div>
+        <h3>Site Vitrine</h3>
+        <p>Uma página com seus serviços, fotos, avaliações, mapa e pedido de orçamento que chega no WhatsApp.</p>
+        <div class="price">R$ 690 <small>+ R$ 49/mês</small></div>
+        <div class="meta">Pronto em 3 dias · serralheria, vidraçaria, floricultura, serviços</div>
+        <a class="see" href="d/?p=site&n=Serralheria%20Exemplo&t=serralheria" target="_blank" rel="noopener">Ver exemplo →</a>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <p class="kicker">Como funciona</p>
+    <h2>Sem risco pra você</h2>
+    <ol class="steps">
+      <li><b>Você manda o que tem pelo WhatsApp</b><span>Cardápio, serviços, preços, fotos e horário. Pode ser foto do papel.</span></li>
+      <li><b>A gente monta e coloca no ar</b><span>Em 2 a 4 dias, com o seu nome e o seu WhatsApp. Você não precisa mexer em nada.</span></li>
+      <li><b>Você testa 7 dias e só paga se aprovar</b><span>Se quiser ajustes, fazemos. Se aprovar, paga por Pix. A mensalidade começa no mês seguinte.</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <p class="kicker">Por que vale a pena</p>
+    <h2>Mais pedidos, menos tempo no celular</h2>
+    <div class="why">
+      <div><i aria-hidden="true">💸</i><p><b>Um pedido a mais por dia já paga a mensalidade</b><small>E o pedido direto não paga comissão de aplicativo.</small></p></div>
+      <div><i aria-hidden="true">📍</i><p><b>Aparece para quem procura no Google</b><small>Coloque o link no seu perfil do Google e na bio do Instagram.</small></p></div>
+      <div><i aria-hidden="true">⏱️</i><p><b>O pedido chega pronto</b><small>Nada de ficar perguntando sabor, endereço e forma de pagamento um por um.</small></p></div>
+      <div><i aria-hidden="true">🛠️</i><p><b>A gente cuida de tudo</b><small>A mensalidade cobre hospedagem, pequenas alterações e suporte.</small></p></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="kicker">Dúvidas</p>
+    <h2>Perguntas comuns</h2>
+    <details><summary>Preciso pagar alguma coisa antes?</summary><p>Não. A gente monta, você usa 7 dias e só paga se aprovar.</p></details>
+    <details><summary>E se eu quiser mudar um preço ou um produto depois?</summary><p>É só mandar no WhatsApp. Pequenas alterações já estão incluídas na mensalidade.</p></details>
+    <details><summary>Preciso de domínio próprio (meunegocio.com.br)?</summary><p>Não precisa. Se quiser, dá para registrar um no Registro.br por cerca de R$ 40 por ano, pago por você.</p></details>
+    <details><summary>Já vendo pelo iFood. Serve pra mim?</summary><p>Serve. O cardápio digital complementa: o cliente que já te conhece pede direto, sem comissão.</p></details>
+  </section>
+
+  <div class="final">
+    <h2>Quer ver como fica com o nome do seu negócio?</h2>
+    <p>Manda uma mensagem que a gente te mostra um exemplo pronto, sem compromisso.</p>
+    <a class="btn btn-zap" id="ctaEnd" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </div>
 </main>
+
+<footer>Freguesia · mais fregueses pro seu negócio · WhatsApp (11) 94552-2214</footer>
+<div class="dock"><div class="wrap"><a class="btn btn-zap" id="ctaDock" href="#" target="_blank" rel="noopener">Quero o meu · só pago se aprovar</a></div></div>
+<script>
+(function(){var u='https://wa.me/5511945522214?text='+encodeURIComponent('Oi! Vi o site da Freguesia e quero ver um exemplo com o nome do meu negócio.');
+['ctaTop','ctaEnd','ctaDock'].forEach(function(id){document.getElementById(id).href=u;});})();
+</script>
 </body>
 </html>
